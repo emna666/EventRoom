@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0" xmlns="http://java.sun.com/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+	<persistence-unit name="event-room-ejb">
+		<jta-data-source>java:/eventDS</jta-data-source>
+		<class>domain.Booking</class>
+		<class>domain.BookingId</class>
+		<class>domain.Customer</class>
+		<class>domain.EventRoom</class>
+		<class>domain.Manager</class>
+		<class>domain.User</class>
+		
+		<properties>
+			<property name="hibernate.hbm2ddl.auto" value="create" />
+		</properties>
+	</persistence-unit>
+</persistence>
